@@ -1,0 +1,77 @@
+<html>
+	<head>
+        <title>Application Sandbox sample</title>
+        <link href="sample.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+        <script type="text/javascript">
+            // AIR-related functions created by the developer
+            
+            // reads the content of a local text file
+            function readLocalFile(){
+                var f = air.File.applicationDirectory.resolvePath("LocalFile.txt");
+				
+                var fs = new air.FileStream();
+                fs.open(f, air.FileMode.READ);
+                var content = fs.readUTFBytes(fs.bytesAvailable);
+                fs.close();
+                
+                return content;
+            }
+            
+            // loads the content of a remote URL
+            function doRequest(url) {
+               var req = new XMLHttpRequest();
+               req.onreadystatechange = function() { 
+                    if (req.readyState == 4) {
+                        var str = req.responseText;
+                        if (str.length > 400) {
+                            str = str.substring(0, 399);
+                            str += "..";
+                        }
+                        alert('readystate: ' + req.readyState + '\n' +
+                            'status/statusText: ' + req.status + '/' + 
+                             req.statusText + '\n' +
+                            'responseText (400 chars): '  + "\n\n" + str);
+                    }
+                };
+                req.open('GET', url, true);
+                req.send(null);                
+            }
+			
+			function openInBrowser(url) {
+				air.navigateToURL( new air.URLRequest(url)); 
+			}
+            
+        </script>
+	</head>
+
+    <body>
+        <h3>Application Sandbox Content</h3>
+        
+        <ul>
+            <li>Has access to AIR APIs:
+            
+                <br/> 
+                <input type="button" onclick="alert(readLocalFile())" value="Read a local file using AIR APIs"/>
+            </li>                 
+            <li>Use of <code>eval()</code> and other string-to-code techniques are limited.
+                &mdash; the following throws an exception because is executed after onload fired:
+                <br/> <input type="button"  onclick='try { eval("alert(44)") } catch (e) {alert(e)}' value='eval("alert(44)")'/>
+				<br/><br/>
+				Read more about these restrictions: <a href="#" onclick="openInBrowser('http://www.adobe.com/go/airhtmlsecurityfaq');">http://www.adobe.com/go/airhtmlsecurityfaq</a>.
+				
+			</li>
+                
+            <li>Can only load JavaScript files from the application resource directory.</li>
+            
+            <li>XMLHttpRequest object can reach into remote domains &mdash; the following loads http://www.adobe.com:
+            <br/> 
+                <input type="button"  onclick='doRequest("http://www.adobe.com");' value='doRequest("http://www.adobe.com");'/>
+            </li>
+			<li>
+				Read more about developing AIR Applications with HTML and Ajax: <a href="#" onclick="openInBrowser('http://www.adobe.com/go/learn_air_html')">http://www.adobe.com/go/learn_air_html</a>.
+			</li>
+        </ul>
+        
+    </body>
+</html>
