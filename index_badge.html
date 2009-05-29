@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>AdobeAirProject Installer Demo</title>
+	<title>NotoAir Installer</title>
 	
 	<style  type="text/css">
 		body {
@@ -12,8 +12,8 @@
 		}
 	</style>
 	
-	<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ -->
-<script type="text/javascript" src="lib/badge/swfobject.js"></script>
+<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ -->
+<script type="text/javascript" src="swfobject.js"></script>
 	
 </head>
 <body>
@@ -32,12 +32,12 @@
 	// <![CDATA[ 
 	// version 9.0.115 or greater is required for launching AIR apps.
 
-		 var so = new SWFObject("lib/badge/AIRInstallBadge.swf", "Badge", "215", "180", "9.0.115", "#FFFFFF");
+		 var so = new SWFObject("AIRInstallBadge.swf", "Badge", "215", "180", "9.0.115", "#FFFFFF");
 		so.addVariable("airversion", "1.5");
 		so.addVariable("appname", "NotoAir");
-		so.addVariable("appurl", "http://sinvertical.com/NotoAir.air");
+		so.addVariable("appurl", "http://static.sinvertical.com/notoair/NotoAir.air");
 		so.addVariable("appid", "com.adobe.example.NotoAir");
-		so.addVariable("image", "icons/DemoImage.jpg");
+		so.addVariable("image", "nair-128.png");
 		so.addVariable("hidehelp", "false");
 		so.addVariable("skiptransition", "false");
 		so.addVariable("appversion", "1.5");

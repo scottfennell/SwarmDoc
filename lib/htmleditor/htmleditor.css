@@ -1,0 +1,13 @@
+body {
+	background: #00ff00;
+	padding: 20px;
+}
+
+.std_hdr {
+  font-size: large;
+  font-weight: bold;
+}
+
+p {
+	margin-bottom: 15px;
+}

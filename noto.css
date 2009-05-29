@@ -17,11 +17,12 @@
   font-size: 75%;
   color: #222; 
   background: #fff;
-  font-family: Tahoma, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .wikiPage .x-panel-body{
-	padding:0;
+	padding:0.5em;
 }
+
 
 /* Headings
 -------------------------------------------------------------- */
@@ -72,7 +73,7 @@
 
 .wikiPage li ul, 
 .wikiPage li ol       { margin:0 1.5em; }
-.wikiPage ul, .wikiPage ol      { margin: 1.5em 1.5em 1.5em 3em; }
+.wikiPage ul, .wikiPage ol      { margin: 0 1.5em 1.5em 1.5em; }
 
 .wikiPage ul          { list-style-type: disc; }
 .wikiPage ol          { list-style-type: decimal; }

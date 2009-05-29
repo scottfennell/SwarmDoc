@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ext.ux.HTMLEditor Example</title>
+    <link rel="stylesheet" type="text/css" href="lib/ext/resources/css/ext-all.css">
+	<script type="text/javascript" src="AIRAliases.js"></script>
+	<script type="text/javascript" src="AIRIntrospector.js"></script>
+    <style type="text/css">
+      body {
+      	font-family: verdana, tahoma, helvetica;
+      	padding: 20px;
+        font-size: 13px;
+      }
+      p {
+      	margin-bottom: 15px;
+      }
+      h1 {
+      	font-size: large;
+      	margin-bottom: 20px;
+      }
+    </style>
+    <script type="text/javascript" src="/lib/ext/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="/lib/ext/ext-all-debug.js"></script>
+    <script type="text/javascript" src="/lib/htmleditor/htmleditor.js"></script>
+    <script type="text/javascript" src="/lib/htmleditor/htmleditorstyles.js"></script>
+    <script type="text/javascript">
+      Ext.onReady(function() {
+        Ext.QuickTips.init();
+        var editor = new Ext.ux.HTMLEditor({
+          width: 650,
+          height: 300,
+          styles: ['htmleditor.css'],
+          plugins: new Ext.ux.HTMLEditorStyles([
+            {text: 'Standard Header', value: 'std_hdr'}
+          ]),
+          el: 'htmleditor'
+        });
+        editor.render();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Improved HtmlEditor & Toolbar</h1>
+    <p>This improved version of the HtmlEditor and Toolbar provides for greater extensibility by splitting the configuration of the toolbar from the actual rendering.</p>
+    <p>The js is not minified so it is readable. See <a href="htmleditor.js">htmleditor.js</a>.</p>
+    <p>The editor also includes an updated version of my HTMLEditorStyles plugin that utilises the new functionality. See <a href="htmleditorstyles.js">htmleditorstyles.js</a>.</p>
+    <textarea id="htmleditor">
+      <span class="std_hdr">A Standard Header</span>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla laoreet imperdiet ipsum. Cras magna pede, mattis sit amet, auctor quis, congue sed, lacus. Phasellus tristique. Donec mollis. Sed venenatis nibh quis orci. Duis vitae orci sagittis mauris iaculis pretium. Curabitur condimentum consequat libero. Donec accumsan. Duis vehicula, pede vel sagittis convallis, sapien nibh rhoncus quam, ut molestie magna nunc gravida ligula. Morbi leo erat, viverra eu, condimentum non, adipiscing vel, ligula. Nulla a nisi vel lorem accumsan posuere. Sed nunc sem, sagittis vitae, sollicitudin eu, condimentum nec, tortor. Sed dignissim fringilla justo. Etiam ultricies metus a ipsum. Duis sollicitudin elit sed nisi. Integer ullamcorper turpis eu elit. Sed sagittis urna at sapien.</p>
+      <p>Vivamus dignissim consectetuer metus. Sed nec arcu vulputate mauris dignissim venenatis. Pellentesque pede ante, laoreet tempus, vehicula nec, suscipit vitae, neque. Donec dapibus molestie lacus. Donec volutpat felis eget erat. Etiam lacus metus, nonummy vitae, cursus in, pharetra quis, purus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur feugiat interdum nisi. Maecenas nulla nisl, facilisis sit amet, viverra id, iaculis imperdiet, purus. Nam tincidunt elit non orci.</p>
+      <p>Nam gravida tellus id ipsum. Vivamus dictum lectus sollicitudin mi. Nunc quis velit sit amet urna laoreet dictum. Proin ante. Proin aliquet. Suspendisse hendrerit lacus adipiscing metus. Duis a pede vitae nulla volutpat vestibulum. Sed porttitor pede molestie orci. Nam iaculis dignissim mauris. Fusce porttitor varius nunc. Vestibulum porttitor neque in urna. Nulla in odio. Pellentesque nisl quam, adipiscing ut, ultricies non, lacinia et, augue. Suspendisse ultrices. Cras ut nunc. Phasellus viverra dui condimentum augue. Maecenas odio. </p>
+      <p>Phasellus ac quam varius nisi sodales semper. Duis scelerisque ligula eu quam. Sed nisl nisi, fermentum ut, varius ut, vulputate eget, arcu. Etiam hendrerit bibendum magna. In vel mi quis nibh tempus mollis. Maecenas sit amet sem. Cras hendrerit feugiat leo. Maecenas vitae ante vel pede malesuada feugiat. Aliquam eget sapien vitae eros laoreet convallis. Vivamus porttitor pede iaculis quam.</p>
+      <p>Aliquam tortor purus, fermentum in, tincidunt sed, pulvinar quis, risus. Aliquam accumsan luctus tortor. Integer diam massa, commodo vitae, fringilla ut, iaculis ac, lacus. Duis ut nunc. Integer congue, enim mattis blandit iaculis, nulla massa volutpat leo, et sodales ligula neque sit amet justo. Mauris tincidunt ligula quis lacus. Duis est. Aenean nonummy pulvinar diam. Donec cursus aliquet justo. Nullam facilisis enim eget neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus molestie porta elit. Donec lacinia tristique magna. Phasellus porttitor orci nec sapien. Mauris dictum congue lacus. Nulla nunc erat, tempor congue, commodo non, interdum sit amet, erat. Donec consectetuer ligula in tortor.</p>
+    </textarea>
+  </body>
+</html>
