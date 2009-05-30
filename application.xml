@@ -14,7 +14,7 @@
 -->
 
 	<!-- The application identifier string, unique to this application. Required. -->
-	<id>com.adobe.example.NotoAir</id>
+	<id>NotoAir</id>
 
 	<!-- Used as the filename for the application. Required. -->
 	<filename>NotoAir</filename>
@@ -23,7 +23,7 @@
 	<name>NotoAir</name>
 
 	<!-- An application version designator (such as "v1", "2.5", or "Alpha 1"). Required. -->
-	<version>0.2</version>
+	<version>0.3</version>
 
 	<!-- Description, displayed in the AIR application installer. Optional. -->
 	<description/>
