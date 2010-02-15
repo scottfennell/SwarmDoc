@@ -14,30 +14,30 @@
 -->
 
 	<!-- The application identifier string, unique to this application. Required. -->
-	<id>NotoAir</id>
+	<id>SwarmDoc</id>
 
 	<!-- Used as the filename for the application. Required. -->
-	<filename>NotoAir</filename>
+	<filename>SwarmDoc</filename>
 
 	<!-- The name that is displayed in the AIR application installer. Optional. -->
-	<name>NotoAir</name>
+	<name>SwarmDoc</name>
 
 	<!-- An application version designator (such as "v1", "2.5", or "Alpha 1"). Required. -->
-	<version>0.3</version>
+	<version>0.5.2</version>
 
 	<!-- Description, displayed in the AIR application installer. Optional. -->
-	<description/>
+	<description>SwarmDoc Note taking software</description>
 
 	<!-- Copyright information. Optional -->
-	<copyright/>
+	<copyright>2009 Scott Fennell</copyright>
 
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>
 		<!-- The main HTML file of the application. Required. -->
-		<content>NotoAir.html</content>
+		<content>SwarmDoc.html</content>
 		
 		<!-- The title of the main window. Optional. -->
-		<title>NotoAir</title>
+		<title>SwarmDoc</title>
 
 		<!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
 		<systemChrome>standard</systemChrome>
@@ -57,20 +57,9 @@
 		<!-- Whether the user can resize the window. Optional. Default true. -->
 		<resizable>true</resizable>
 
-		<!-- The window's initial width. Optional. -->
-		<width>1024</width>
-
-		<!-- The window's initial height. Optional. -->
-		<height>768</height>
-
-		<!-- The window's initial x position. Optional. -->
-		<x>200</x>
-
-		<!-- The window's initial y position. Optional. -->
-		<y>200</y>
-
-		<!-- The window's minimum size, specified as a width/height pair, such as "400 200". Optional. -->
+		<!-- The window's minimum size, specified as a width/height pair, such as "400 200". Optional. 
 		<minSize>800 600</minSize>
+		-->
 
 		<!-- The window's initial maximum size, specified as a width/height pair, such as "1600 1200". Optional. -->
 		<!-- <maxSize>1280 1024</maxSize> -->
@@ -85,10 +74,10 @@
 	<!-- The icon the system uses for the application. For at least one resolution,
 		 specify the path to a PNG file included in the AIR package. Optional. -->
 	<icon>
-		<image16x16>icons/nair-16_2.png</image16x16>
-		<image32x32>icons/nair-32_2.png</image32x32>
-		<image48x48>icons/nair-48_2.png</image48x48>
-		<image128x128>icons/nair-128_2.png</image128x128>
+		<image16x16>icons/swarmdoc-16.png</image16x16>
+		<image32x32>icons/swarmdoc-32.png</image32x32>
+		<image48x48>icons/swarmdoc-48.png</image48x48>
+		<image128x128>icons/swarmdoc-128.png</image128x128>
 	</icon>
 
 	<!-- Whether the application handles the update when a user double-clicks an update version
