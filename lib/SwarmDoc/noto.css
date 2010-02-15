@@ -1,0 +1,153 @@
+.wikiLink {
+    color:#00f;
+    cursor:pointer;
+}
+
+/* -------------------------------------------------------------- 
+   
+   typography.css
+   * Sets up some sensible default typography.
+   The base class of the element is..... 
+   
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+.wikiPage { 
+  font-size: 75%;
+  color: #222; 
+  background: #fff;
+  font-family: Tahoma, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.wikiPage .x-panel-body{
+	padding:0;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+.wikiPage h1, .wikiPage h2,.wikiPage h3,.wikiPage h4,.wikiPage h5,.wikiPage h6 { font-weight: normal; color: #111; }
+
+.wikiPage h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+.wikiPage h2 { font-size: 2em; margin-bottom: 0.75em; }
+.wikiPage h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+.wikiPage h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+.wikiPage h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+.wikiPage h6 { font-size: 1em; font-weight: bold; }
+
+.wikiPage h1 img, .wikiPage h2 img, .wikiPage h3 img, 
+.wikiPage h4 img, .wikiPage h5 img, .wikiPage h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+.wikiPage p           { margin: 0 0 1.5em; }
+.wikiPage p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+.wikiPage p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+.wikiPage a:focus, 
+.wikiPage a:hover     { color: #000; }
+.wikiPage a           { color: #009; text-decoration: underline; }
+
+.wikiPage blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+.wikiPage strong      { font-weight: bold; }
+.wikiPage em,dfn      { font-style: italic; }
+.wikiPage dfn         { font-weight: bold; }
+.wikiPage sup, sub    { line-height: 0; }
+
+.wikiPage abbr, 
+.wikiPage acronym     { border-bottom: 1px dotted #666; }
+.wikiPage address     { margin: 0 0 1.5em; font-style: italic; }
+.wikiPage del         { color:#666; }
+
+.wikiPage pre 				{ margin: 1.5em 0; white-space: pre; }
+.wikiPage pre,.wikiPage code,.wikiPage tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+.wikiPage li ul, 
+.wikiPage li ol       { margin:0 1.5em; }
+.wikiPage ul, .wikiPage ol      { margin: 1.5em 1.5em 1.5em 3em; }
+
+.wikiPage ul          { list-style-type: disc; }
+.wikiPage ol          { list-style-type: decimal; }
+
+.wikiPage dl          { margin: 0 0 1.5em 0; }
+.wikiPage dl dt       { font-weight: bold; }
+.wikiPage dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+.wikiPage table       { margin-bottom: 1.4em; width:100%; }
+.wikiPage th          { font-weight: bold; }
+.wikiPage thead th 		{ background: #c3d9ff; }
+.wikiPage th,.wikiPage td,.wikiPage caption { padding: 4px 10px 4px 5px; }
+.wikiPage tr.even td  { background: #e5ecf9; }
+.wikiPage tfoot       { font-style: italic; }
+.wikiPage caption     { background: #eee; }
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.wikiPage .small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.wikiPage .large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.wikiPage .hide       { display: none; }
+
+.wikiPage .quiet      { color: #666; }
+.wikiPage .loud       { color: #000; }
+.wikiPage .highlight  { background:#ff0; }
+.wikiPage .added      { background:#060; color: #fff; }
+.wikiPage .removed    { background:#900; color: #fff; }
+
+.wikiPage .first      { margin-left:0; padding-left:0; }
+.wikiPage .last       { margin-right:0; padding-right:0; }
+.wikiPage .top        { margin-top:0; padding-top:0; }
+.wikiPage .bottom     { margin-bottom:0; padding-bottom:0; }
+
+div#historyPanel {
+    padding: 10px;
+}
+
+div#historyPanel table.history tbody, table.history {
+    border-left:1px solid #0a0a0a;
+    border-top:1px solid #0a0a0a;
+}
+
+div#historyPanel table.history td, table.history th {
+    border-bottom:1px solid #0a0a0a;
+    border-right:1px solid #0a0a0a;
+    padding:3px;
+}
+
+/* --- --- -- --- ---- -- Tree Icons -- -- -- -- --- --- -*/
+
+.x-tree-node-leaf .x-tree-node-icon-page{
+	background-image:url(../naimages/note.gif);
+}
+.x-tree-node-leaf .x-tree-node-icon-home{
+	background-image:url(../naimages/icon_home.gif);
+}
+.x-tree-node-leaf .x-tree-node-icon-all{
+	background-image:url(../naimages/table.gif);
+}
+.x-tree-node-leaf .x-tree-node-icon-settings{
+	background-image:url(../naimages/list_settings.gif);
+}
+.x-tree-node-leaf .x-tree-node-icon-sync{
+	background-image:url(../naimages/action_refresh.gif);
+}
+.x-tree-node-collapsed .x-tree-node-icon-recent-closed{
+	background-image:url(../images/default/tree/folder.gif);
+}
+.x-tree-node-expanded .x-tree-node-icon-recent-open{
+	background-image:url(../ext/resources/images/default/tree/folder-open.gif);
+}
+
